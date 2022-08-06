@@ -20,4 +20,7 @@ public class LoginPageElements {
     @FindBy(css = "input[value='Login']")
     public WebElement loginButton;
 
+    @FindBy(css = "div[class='alert alert-danger alert-dismissible']")
+    public WebElement errorMessage;
+
 }

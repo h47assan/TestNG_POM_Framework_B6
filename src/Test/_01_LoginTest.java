@@ -33,4 +33,25 @@ public class _01_LoginTest extends BaseDriver {
 
     }
 
+    @Test
+    public void loginNegativeTest() {
+
+        homePageElements = new HomePageElements(driver);
+        loginPageElements = new LoginPageElements(driver);
+
+        homePageElements.myAccountButton.click();
+        homePageElements.loginButton.click();
+
+        loginPageElements.emailInput.sendKeys("test@technostudy.com");
+        loginPageElements.passwordInput.sendKeys("Test1234!!!");
+        loginPageElements.loginButton.click();
+
+        String errorActualText = loginPageElements.errorMessage.getText();
+        boolean isErrorDisplayed = loginPageElements.errorMessage.isDisplayed();
+
+        Assert.assertTrue(isErrorDisplayed);
+        Assert.assertEquals(errorActualText, "Warning: No match for E-Mail Address and/or Password.");
+
+    }
+
 }
