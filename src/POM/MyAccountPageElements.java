@@ -14,4 +14,19 @@ public class MyAccountPageElements {
     @FindBy(xpath = "//h2[text()='My Account']")
     public WebElement myAccountHeader;
 
+    @FindBy(xpath = "//a[text()='Newsletter']")
+    public WebElement newsletterButton;
+
+    @FindBy(xpath = "(//input[@name='newsletter'])[1]")
+    public WebElement subscribeYesRadioButton;
+
+    @FindBy(xpath = "(//input[@name='newsletter'])[2]")
+    public WebElement subscribeNoRadioButton;
+
+    @FindBy(css = "input[value='Continue']")
+    public WebElement continueButton;
+
+    @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+    public WebElement successMessage;
+
 }
