@@ -38,4 +38,31 @@ public class MyAccountPageElements {
     @FindBy(id = "input-lastname")
     public WebElement lastNameInput;
 
+    @FindBy(xpath = "//a[text()='Address Book']")
+    public WebElement addressBookButton;
+
+    @FindBy(xpath = "//a[text()='New Address']")
+    public WebElement newAddressButton;
+
+    @FindBy(id = "input-address-1")
+    public WebElement address1Input;
+
+    @FindBy(id = "input-city")
+    public WebElement cityInput;
+
+    @FindBy(id = "input-postcode")
+    public WebElement postalCodeInput;
+
+    @FindBy(id = "input-country")
+    public WebElement countryDropdown;
+
+    @FindBy(id = "input-zone")
+    public WebElement stateDropdown;
+
+    @FindBy(xpath = "(//input[@name='default'])[1]")
+    public WebElement defaultAddressYesRadioButton;
+
+    @FindBy(xpath = "(//input[@name='default'])[2]")
+    public WebElement defaultAddressNoRadioButton;
+
 }
