@@ -29,4 +29,13 @@ public class MyAccountPageElements {
     @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
     public WebElement successMessage;
 
+    @FindBy(xpath = "//a[text()='Edit Account']")
+    public WebElement editAccountButton;
+
+    @FindBy(id = "input-firstname")
+    public WebElement firstNameInput;
+
+    @FindBy(id = "input-lastname")
+    public WebElement lastNameInput;
+
 }
