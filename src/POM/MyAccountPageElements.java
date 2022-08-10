@@ -2,8 +2,11 @@ package POM;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class MyAccountPageElements {
 
@@ -64,5 +67,12 @@ public class MyAccountPageElements {
 
     @FindBy(xpath = "(//input[@name='default'])[2]")
     public WebElement defaultAddressNoRadioButton;
+
+    // @FindAll works like -> driver.findElements()   |   @FindBy works like -> driver.findElement()
+    @FindAll({@FindBy(css = "a[class='btn btn-info']")})
+    public List<WebElement> editButtonsList;
+
+    @FindAll({@FindBy(css = "a[class='btn btn-danger']")})
+    public List<WebElement> deleteButtonsList;
 
 }
