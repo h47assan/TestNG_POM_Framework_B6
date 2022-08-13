@@ -1,0 +1,8 @@
+<suite name="Contact Us Function Test Suite">
+    <test name="Contact Us Test">
+        <parameter name="enquiry" value="Hello, Java is a great language! And Selenium is good too."></parameter>
+        <classes>
+            <class name="Test._06_ContactUsFunctionTest"></class>
+        </classes>
+    </test>
+</suite>
