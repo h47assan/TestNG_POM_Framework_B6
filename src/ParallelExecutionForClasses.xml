@@ -1,0 +1,12 @@
+<suite name="Parallel Exe Suite">
+
+    <test name="Basic Functions Test" parallel="classes" thread-count="3">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="Test._01_LoginTest"></class>
+            <class name="Test._02_SubscribeFunctionTest"></class>
+            <class name="Test._03_EditAccountTest"></class>
+        </classes>
+    </test>
+
+</suite>
